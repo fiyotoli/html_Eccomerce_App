@@ -132,7 +132,7 @@
             })
             .catch(error => console.error('Error loading contact section:', error));
 
-        fetch('./components/About/about.html')
+        fetch('/components/About/about.html')
             .then(response => response.text())
             .then(data => {
                 document.getElementById('about-container').innerHTML = data;
