@@ -191,7 +191,7 @@
         </div>
         <div class="row">
             <div class="col-6 col-sm-12 col-md-auto  mb-2 mb-md-0">
-                <a href="./products.html" class="btn border rounded border-primary w-100">Back to product</a>
+                <a href="./products.html" class="btn border backBtn rounded border-primary w-100">Back to product</a>
             </div>
             <div class="col-6 col-sm-12 col-md-auto">
                 <button class="btn btn-primary w-100" onclick="addToCart('${product.id}', '${product.title}', ${product.price}, '${product.image}')">Add to Cart</button>
@@ -247,13 +247,14 @@
             });
         }
 
-        // Update cart count badge
-        function updateCartCount() {
-            const cartCount = document.getElementById('cart-count');
-            const cart = JSON.parse(localStorage.getItem('cart')) || [];
-            const totalCount = cart.reduce((sum, item) => sum + item.quantity, 0);
-            cartCount.innerText = totalCount;
-        }
+       // Update the cart count display to show unique items only
+function updateCartCount() {
+    const cartCount = document.getElementById('cart-count');
+    const cart = JSON.parse(localStorage.getItem('cart')) || [];
+    const uniqueItemCount = cart.length; // Count unique items in the cart
+    cartCount.textContent = uniqueItemCount; // Update the cart count display
+}
+
 
         // Function to add items to the cart
         function addToCart(id, title, price, image) {

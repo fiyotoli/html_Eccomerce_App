@@ -84,7 +84,7 @@ function displayProducts(products) {
                     <div class="card-body d-flex flex-column">
                         <h5 class="card-title text-truncate mt-2">${product.title}</h5>
                         <div class="row mb-2 justify-content-between">
-                            <div class="d-flex col col-sm-6 my-2 text-primary">
+                            <div class="d-flex  my-2 text-primary">
                                 <i class="bi bi-star-fill"></i>
                                 <i class="bi bi-star-fill"></i>
                                 <i class="bi bi-star-fill"></i>
@@ -174,15 +174,15 @@ function displayRecentProperties(properties) {
                     <div class="card-body d-flex flex-column">
                         <h5 class="card-title text-truncate mt-2">${property.title}</h5>
                         <div class="row mb-2 justify-content-between">
-                            <div class="d-flex col col-sm-6 my-2 text-primary">
+                            <div class="d-flex mb-3 my-2 text-primary">
                                 <i class="bi bi-star-fill"></i>
                                 <i class="bi bi-star-fill"></i>
                                 <i class="bi bi-star-fill"></i>
                                 <i class="bi bi-star-fill"></i>
                                 <i class="bi bi-star-half"></i>
                             </div>
-                            <div class="col col-sm-6"> 
-                                <p class="card-text p-2 btn btn-primary rounded mb-2" style="font-weight: bold; display: inline-block;">
+                            <div class=""> 
+                                <p class="card-text py-1 px-5 btn btn-primary rounded-pill mb-2" style="font-weight: bold; ">
                                     $${property.price}
                                 </p>
                             </div>
@@ -280,11 +280,12 @@ function addToCart(id, title, price) {
     updateCartCount(); // Update the cart count display
 }
 
-// Update the cart count display
+// Update the cart count display to show unique items only
 function updateCartCount() {
     const cartCount = document.getElementById('cart-count');
     const cart = JSON.parse(localStorage.getItem('cart')) || [];
-    const totalCount = cart.reduce((acc, item) => acc + item.quantity, 0); // Calculate total quantity
-    cartCount.textContent = totalCount; // Update the cart count display
+    const uniqueItemCount = cart.length; // Count unique items in the cart
+    cartCount.textContent = uniqueItemCount; // Update the cart count display
 }
+
 
