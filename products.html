@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - E-Shop</title>
+    <!-- Bootstrap and Icons -->
+    <link rel="icon" href="./images/logo.jpg" type="image/jpg">
+    <link rel="stylesheet" href="./assets/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="./assets/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./style.css">
+
+    <style>
+        /* Custom badge style */
+        .badge-cart {
+            position: absolute;
+            top: 0;
+            right: 0;
+            transform: translate(50%, -20%);
+        }
+        .cart-icon-wrapper {
+            position: relative; /* For badge positioning */
+        }
+    </style>
+</head>
+<body>
+   <!-- Spinner -->
+   <div class="spinner-wrapper">
+    <button class="btn btn-primary me-2 py-2" type="button" disabled>
+        <span class="spinner-border spinner-border-sm" aria-hidden="true"></span>
+        <span class="visually-hidden" role="status">Loading...</span>
+    </button>
+    <button class="btn btn-primary me-2 py-2" type="button" disabled>
+        <span class="spinner-border spinner-border-sm" aria-hidden="true"></span>
+        <span role="status">Loading...</span>
+    </button>
+</div>
+
+   
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top shadow">
+    <div class="container py-2">
+        <!-- Left Section: Emoji and Logo -->
+        <a class="navbar-brand d-flex align-items-center text-primary fw-bold" href="index.html">
+            <span role="img" aria-label="shopping" class="me-2">🛒</span> E-Shop
+        </a>
+        
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <!-- Center Section: Home and Products Links -->
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item">
+                    <a class="nav-link text-primary fw-bold" href="index.html">Home</a> <!-- Default bold and primary color -->
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link fw-bold" href="products.html">Products</a>
+                </li>
+            </ul>
+
+            <!-- Right Section: Cart Icon and Contact Us Button -->
+            <div class="d-flex align-items-center">
+                <a class="nav-link position-relative me-3" href="cart.html" id="cart-link">
+                    <i class="bi bi-basket" style="font-size: 20px;"></i> <!-- Bootstrap Cart Icon -->
+                    <span class="badge bg-danger rounded position-absolute" id="cart-count" 
+                          style="font-size: 0.7rem; padding: 2px 5px; top: -5px; right: -15px;">
+                        0
+                    </span>
+                </a>
+                <a href="./products.html" class="btn ms-2 btn-primary">Order now</a>
+            </div>
+        </div>
+    </div>
+</nav>
+    <div class="container mt-5" style="padding-top: 70px;">
+       
+        
+       <!-- Search Input with Bootstrap Search Icon -->
+<div class="mb-5 container col-md-8">
+    <div class="input-group shadow rounded-pill">
+        <input type="text" id="product-filter" class="form-control p-3 border-0" placeholder="Enter product name" />
+        <span class="input-group-text bg-white border-0">
+            <i class="bi bi-search text-primary"></i>
+        </span>
+    </div>
+</div>
+
+<div class="row mb-3" id="product-list">
+            <!-- Products will be displayed here -->
+        </div>
+    </div>
+
+  <!-- footer section -->
+  <div id="footer-container"></div> <!-- Placeholder for the footer section -->
+  <!-- footer section -->
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="btn btn-primary" style="display: none;">
+        <i class="bi bi-arrow-up"></i> <!-- Bootstrap Icon for arrow -->
+    </button>
+<!-- footer section -->
+<script>
+    fetch('components/Footer/footer.html')
+          .then(response => response.text())
+          .then(data => {
+              document.getElementById('footer-container').innerHTML = data;
+          })
+          .catch(error => console.error('Error loading footer section:', error));
+
+</script>
+<!-- footer section -->
+    <script src="./js/script.js" defer></script>
+    <script src="./js/spinner.js" defer></script>
+    <script src="./assets/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

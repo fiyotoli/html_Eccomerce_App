@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Footer</title>
+    <link rel="stylesheet" href="../../assets/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../../assets/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../style.css">
+    <style>
+        .social-icon {
+            border-radius: 50%;
+            background-color: white;
+            padding: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 10px;
+            width: 40px;
+            height: 40px;
+            color: #0d6efd; /* Primary color for icons */
+        }
+
+        .icon-large {
+            font-size: 1.25rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <footer class=" pt-5 pb-2 bg-primary bg-opacity-10">
+        <div class="container ">
+            <div class="row "> <!-- Changed text-left to text-center -->
+                <!-- Logo, Paragraph, and Social Media (Column 1) -->
+                <div class="col-md-4 mb-3">
+                    <h5 class="mb-3 fw-bold text-primary">🛒 E-Shop </h5>
+                    <p>Connecting people with the products they love.</p>
+                </div>
+
+                <!-- Services (Column 2) -->
+                <div class="col-md-4 mb-3">
+                    <h5 class="mb-3">Services</h5>
+                    <ul class="list-unstyled">
+                        <li>Product Listing</li>
+                        <li>Customer Support</li>
+                        <li>Order Tracking</li>
+                        <li>Returns</li>
+                    </ul>
+                </div>
+
+                <!-- Contact (Column 3) -->
+                <div class="col-md-4 mb-3">
+                    <h5 class="mb-3">Contact</h5>
+                    <p class="mb-0"><i class="bi bi-geo-alt me-2 text-primary icon-large"></i>123 E-Shop St., City, State, ZIP</p>
+                    <p class="mb-0"><i class="bi bi-telephone-fill text-primary me-2 icon-large"></i>(123) 456-7890</p>
+                    <p class="mb-0"><i class="bi bi-envelope-fill text-primary me-2 icon-large"></i>info@eshopworld.com</p>
+                </div>
+            </div>
+
+            <hr class="my-4" />
+
+            <!-- Social Media Icons Above Copyright -->
+            <div class="text-center mb-3">
+                <div class="social-icons mt-2">
+                    <a href="#" class="social-icon text-primary">
+                        <i class="bi bi-facebook" style="font-size: 20px;"></i>
+                    </a>
+                    <a href="#" class="social-icon text-primary">
+                        <i class="bi bi-twitter" style="font-size: 20px;"></i>
+                    </a>
+                    <a href="#" class="social-icon text-primary">
+                        <i class="bi bi-instagram" style="font-size: 20px;"></i>
+                    </a>
+                </div>
+            </div>
+
+            <p class="text-center mb-0 text-black">© <span id="year"></span> E-Shop World. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Set the current year in the footer
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+
+    <!-- Bootstrap Bundle JS -->
+    <script src="../../assets/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

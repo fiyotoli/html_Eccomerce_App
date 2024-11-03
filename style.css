@@ -1,0 +1,85 @@
+
+/* style.css */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400&display=swap');
+
+/* Apply Poppins font to all elements */
+* {
+  font-family: 'Poppins', sans-serif; /* Fallback to sans-serif if Poppins is not available */
+}
+
+/* Additional styles can go here */
+
+
+  * {
+    margin: 0;                /* Remove default margin */
+    padding: 0;               /* Remove default padding */
+    box-sizing: border-box;   /* Include padding and border in total width and height */
+}
+
+/* Ensure html and body fill the viewport */
+html, body {
+    min-width: 100%;             /* Set width to 100% of the viewport */
+    min-height: 100%;             /* Set height to 100% of the viewport */
+    overflow-x: hidden;       /* Prevent horizontal scrolling */
+         /* Allow vertical scrolling if necessary */
+}
+
+
+body {
+    background-color: #ffffff;
+}
+
+.navbar {
+    margin-bottom: 20px;
+}
+
+.product-card {
+    margin-bottom: 30px;
+}
+#product-filter:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.spinner-wrapper {
+    background-color: rgba(0, 0, 0, 0.8); /* Changed to a valid color */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s;
+}
+
+
+/* Style for the Back to Top button */
+#back-to-top {
+    position: fixed;
+    bottom: 20px; /* Distance from the bottom */
+    right: 20px; /* Distance from the right */
+    z-index: 1000; /* Ensures it appears above other content */
+    border-radius: 50%; /* Makes the button round */
+    width: 50px; /* Button size */
+    height: 50px; /* Button size */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.3s; /* Smooth transition for visibility */
+}
+
+
+.container .error {
+    color: red;
+    font-size: 15px;
+    width: 100%; /* Set to 100% to occupy the full width of the container */
+    text-align: left;
+    margin-top: 5px; /* Adjust margin for better spacing */
+    text-transform: capitalize;
+   
+}
+
+
