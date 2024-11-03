@@ -89,9 +89,63 @@
             </div>
         </div>
     </div>
-      <!-- footer section -->
-      <div id="footer-container"></div> <!-- Placeholder for the footer section -->
-      <!-- footer section -->
+       <!-- footer section -->
+       <div id="footer-container">
+        <footer class=" pt-5 pb-2 bg-primary bg-opacity-10">
+            <div class="container ">
+                <div class="row "> <!-- Changed text-left to text-center -->
+                    <!-- Logo, Paragraph, and Social Media (Column 1) -->
+                    <div class="col-md-4 mb-3">
+                        <h5 class="mb-3 fw-bold text-primary">🛒 E-Shop </h5>
+                        <p>Connecting people with the products they love.</p>
+                    </div>
+    
+                    <!-- Services (Column 2) -->
+                    <div class="col-md-4 mb-3">
+                        <h5 class="mb-3">Services</h5>
+                        <ul class="list-unstyled">
+                            <li>Product Listing</li>
+                            <li>Customer Support</li>
+                            <li>Order Tracking</li>
+                            <li>Returns</li>
+                        </ul>
+                    </div>
+    
+                    <!-- Contact (Column 3) -->
+                    <div class="col-md-4 mb-3">
+                        <h5 class="mb-3">Contact</h5>
+                        <p class="mb-0"><i class="bi bi-geo-alt me-2 text-primary icon-large"></i>123 E-Shop St., City, State, ZIP</p>
+                        <p class="mb-0"><i class="bi bi-telephone-fill text-primary me-2 icon-large"></i>(123) 456-7890</p>
+                        <p class="mb-0"><i class="bi bi-envelope-fill text-primary me-2 icon-large"></i>info@eshopworld.com</p>
+                    </div>
+                </div>
+    
+                <hr class="my-4" />
+    
+                <!-- Social Media Icons Above Copyright -->
+                <div class="text-center mb-3">
+                    <div class="social-icons mt-2">
+                        <a href="#" class="social-icon text-primary">
+                            <i class="bi bi-facebook" style="font-size: 20px;"></i>
+                        </a>
+                        <a href="#" class="social-icon text-primary">
+                            <i class="bi bi-twitter" style="font-size: 20px;"></i>
+                        </a>
+                        <a href="#" class="social-icon text-primary">
+                            <i class="bi bi-instagram" style="font-size: 20px;"></i>
+                        </a>
+                    </div>
+                </div>
+    
+                <p class="text-center mb-0 text-black">© <span id="year"></span> E-Shop World. All rights reserved.</p>
+            </div>
+        </footer>
+    
+        <script>
+            // Set the current year in the footer
+            document.getElementById("year").textContent = new Date().getFullYear();
+        </script>
+    </div>
 
      <!-- Back to Top Button -->
      <button id="back-to-top" class="btn btn-primary" style="display: none;">
@@ -222,15 +276,7 @@
         document.addEventListener('DOMContentLoaded', updateCartCount);
     </script>
 <!-- footer section -->
-<script>
-    fetch('components/Footer/footer.html')
-          .then(response => response.text())
-          .then(data => {
-              document.getElementById('footer-container').innerHTML = data;
-          })
-          .catch(error => console.error('Error loading footer section:', error));
 
-</script>
 <!-- footer section -->
     <!-- Bootstrap Bundle JS -->
     <script src="./assets/bootstrap/dist/js/bootstrap.bundle.min.js"></script>

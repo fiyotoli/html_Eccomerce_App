@@ -42,7 +42,7 @@ body {
 }
 
 .spinner-wrapper {
-    background-color: rgba(0, 0, 0, 0.8); /* Changed to a valid color */
+    background-color: rgba(0, 0, 0, 1); /* Changed to a valid color */
     position: fixed;
     top: 0;
     left: 0;
