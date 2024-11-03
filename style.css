@@ -81,5 +81,85 @@ body {
     text-transform: capitalize;
    
 }
+ /* hero section style */
+.hero-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .hero-btn {
+    border-radius: 50px;
+    display: inline-block; /* Make the button inline to its content */
+  }
+/* about section style */
+.about-section {
+    padding: 50px 0;
+}
+.line {
+    width: 50px;
+    height: 5px;
+    background-color: #0d6efd; /* Bootstrap primary color */
+    margin-right: 10px;
+}
+.small-text {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+.icon-title {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.icon-title i {
+    font-size: 24px; /* Adjust icon size */
+    margin-right: 10px; /* Space between icon and text */
+    color: #0d6efd; /* Primary color for the icon */
+}
+  /* servece section style */
+  .service-card {
+    text-align: center;
+    padding: 20px;
+    border-radius: 8px;
+    transition: transform 0.2s;
+    height: 100%; /* Allow cards to stretch to equal height */
+    display: flex;
+    flex-direction: column;
+}
+.service-card .card-body {
+    height: 100%; /* Set equal height for card body */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Space elements evenly */
+}
+.service-card:hover {
+    transform: translateY(-5px);
+}
+.service-card.shadow {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+.border-bottom {
+    border-bottom: 2px solid #28a745;
+    margin: 10px 0;
+}
 
+/* footer section */
+.social-icon {
+    border-radius: 50%;
+    background-color: white;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+    width: 40px;
+    height: 40px;
+    color: #0d6efd; /* Primary color for icons */
+}
 
+.icon-large {
+    font-size: 1.25rem;
+}
