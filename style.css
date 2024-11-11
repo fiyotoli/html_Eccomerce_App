@@ -39,6 +39,7 @@ body {
 #product-filter:focus {
     outline: none;
     box-shadow: none;
+  
 }
 .input:focus {
     outline: none;

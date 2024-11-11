@@ -182,7 +182,7 @@ function displayRecentProperties(properties) {
                                 <i class="bi bi-star-half"></i>
                             </div>
                             <div class=""> 
-                                <p class="card-text py-1 px-5 btn btn-primary rounded-pill mb-2" style="font-weight: bold; ">
+                                <p class="card-text py-1 px-5 btn btn-primary rounded-pill mb-2" style="font-weight: bold; cursor: default;">
                                     $${property.price}
                                 </p>
                             </div>
